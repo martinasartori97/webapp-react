@@ -2,8 +2,8 @@ export default function Footer() {
     return (
         <footer>
 
-            <p>
-                ciao footer
+            <p >
+                copyright 2024
             </p>
 
 

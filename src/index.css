@@ -3,3 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+header {
+  padding-left: 3rem;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  font-size: x-large;
+}

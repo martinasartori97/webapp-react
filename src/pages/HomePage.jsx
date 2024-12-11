@@ -73,7 +73,7 @@ export default function HomePage() {
                 {
                     movies.map(movie => (
                         <div className="col" key={movie.id}>
-                            <div className="card">
+                            <div className="card bg-info">
                                 <div className="card-body">
                                     <h5 className="card-title">{movie.titolo}</h5>
                                     <p className="card-text">Regista: {movie.regista}</p>
