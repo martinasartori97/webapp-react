@@ -1,7 +1,10 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 import React from 'react'
-import AppLayout from 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import DefaultLayout from './pages/DefaultLayout'
+import HomePage from './pages/HomePage'
+import DetailsPage from './pages/DetailsPage'
 
 import './App.css'
 
@@ -9,8 +12,13 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path="/" element={<HomePage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
