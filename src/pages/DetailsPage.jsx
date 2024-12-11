@@ -1,4 +1,9 @@
-export default function DetailsPage({ movie }) {
+export default function DetailsPage() {
+    return (
+        <>
+
+        </>
+    )
 
 
 
