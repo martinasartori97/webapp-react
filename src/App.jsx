@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import React from 'react'
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<DetailsPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
