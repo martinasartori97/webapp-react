@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function HomePage() {
 
 
@@ -78,6 +79,9 @@ export default function HomePage() {
                                     <p className="card-text">image: {movie.image}</p>
                                     <p className="card-text">created_at: {movie.created_at}</p>
                                     <p className="card-text">updated_at: {movie.updated_at}</p>
+                                    <Link to={`/films/${movie.id}`} className="btn btn-primary">
+                                        View Details
+                                    </Link>
 
                                 </div>
                             </div>
