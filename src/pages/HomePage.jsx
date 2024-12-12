@@ -84,7 +84,7 @@ export default function HomePage() {
                         <div className="col" key={movie.id}>
                             <div className="card bg-info">
                                 <div className="card-body">
-                                    <h5 className="card-title">{movie.titolo}</h5>
+                                    <h5 className="card-title">{movie.title}</h5>
                                     <p className="card-text">director: {movie.director}</p>
                                     <p className="card-text">genre: {movie.genre}</p>
                                     <p className="card-text">release_year: {movie.release_year}</p>
