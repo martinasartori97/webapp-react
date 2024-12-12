@@ -67,7 +67,7 @@ export default function DetailsPage() {
     // const [movie, setMovie] = useState(null);
     const movie = movies.find(movie => movie.id === parseInt(id));
     useEffect(() => {
-        fetch(`http://localhost:3001/api/movies/${id}`)
+        fetch(`http://localhost:3001/api/movies/id`)
             .then(response => response.json())
             .then(data => setMovie(data))
             .catch(err => console.log("Errore:", err));
