@@ -5,63 +5,58 @@ export default function HomePage() {
     const movies = [
         {
             id: 1,
-            titolo: "Pulp Fiction",
-            regista: "Quentin Tarantino",
-            anno: 1994
+            title: "Inception",
+            director: "Christopher Nolan",
+            genre: "Science Fiction",
+            release_year: 2010,
+            abstract: "A skilled thief is given a chance at redemption if he can successfully perform inception.",
+            image: null,
+            created_at: "2024-11-29T10:40:13.000Z",
+            updated_at: "2024-11-29T10:40:13.000Z"
         },
         {
             id: 2,
-            titolo: "Il Padrino",
-            regista: "Francis Ford Coppola",
-            anno: 1972
+            title: "The Godfather",
+            director: "Francis Ford Coppola",
+            genre: "Crime",
+            release_year: 1972,
+            abstract: "The story of a powerful Italian-American crime family and their struggles.",
+            image: null,
+            created_at: "2024-11-29T10:40:13.000Z",
+            updated_at: "2024-11-29T10:40:13.000Z"
         },
         {
             id: 3,
-            titolo: "Inception",
-            regista: "Christopher Nolan",
-            anno: 2010
+            title: "Titanic",
+            director: "James Cameron",
+            genre: "Romance",
+            release_year: 1997,
+            abstract: "A romantic story set against the tragic sinking of the RMS Titanic.",
+            image: null,
+            created_at: "2024-11-29T10:40:13.000Z",
+            updated_at: "2024-11-29T10:40:13.000Z"
         },
         {
             id: 4,
-            titolo: "Fight Club",
-            regista: "David Fincher",
-            anno: 1999
+            title: "The Matrix",
+            director: "The Wachowskis",
+            genre: "Action",
+            release_year: 1999,
+            abstract: "A hacker discovers the truth about his reality and his role in the war against its controllers.",
+            image: null,
+            created_at: "2024-11-29T10:40:13.000Z",
+            updated_at: "2024-11-29T10:40:13.000Z"
         },
         {
             id: 5,
-            titolo: "Matrix",
-            regista: "Lana Wachowski, Lilly Wachowski",
-            anno: 1999
-        },
-        {
-            id: 6,
-            titolo: "C'era una volta in America",
-            regista: "Sergio Leone",
-            anno: 1984
-        },
-        {
-            id: 7,
-            titolo: "Forrest Gump",
-            regista: "Robert Zemeckis",
-            anno: 1994
-        },
-        {
-            id: 8,
-            titolo: "Il Cavaliere Oscuro",
-            regista: "Christopher Nolan",
-            anno: 2008
-        },
-        {
-            id: 9,
-            titolo: "La La Land",
-            regista: "Damien Chazelle",
-            anno: 2016
-        },
-        {
-            id: 10,
-            titolo: "Parasite",
-            regista: "Bong Joon-ho",
-            anno: 2019
+            title: "Interstellar",
+            director: "Christopher Nolan",
+            genre: "Science Fiction",
+            release_year: 2014,
+            abstract: "A team of explorers travels through a wormhole in space to save humanity.",
+            image: null,
+            created_at: "2024-11-29T10:40:13.000Z",
+            updated_at: "2024-11-29T10:40:13.000Z"
         }
     ];
 
@@ -76,8 +71,14 @@ export default function HomePage() {
                             <div className="card bg-info">
                                 <div className="card-body">
                                     <h5 className="card-title">{movie.titolo}</h5>
-                                    <p className="card-text">Regista: {movie.regista}</p>
-                                    <p className="card-text">Anno: {movie.anno}</p>
+                                    <p className="card-text">director: {movie.director}</p>
+                                    <p className="card-text">genre: {movie.genre}</p>
+                                    <p className="card-text">release_year: {movie.release_year}</p>
+                                    <p className="card-text">abstract: {movie.abstract}</p>
+                                    <p className="card-text">image: {movie.image}</p>
+                                    <p className="card-text">created_at: {movie.created_at}</p>
+                                    <p className="card-text">updated_at: {movie.updated_at}</p>
+
                                 </div>
                             </div>
                         </div>
