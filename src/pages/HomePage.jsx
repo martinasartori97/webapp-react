@@ -6,7 +6,7 @@ export default function HomePage() {
 
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/movies/id")
+        fetch(`http://localhost:3001/api/movies`)
             .then((response) => response.json())
             .then((data) => setMovies(data))
             .catch((error) => console.error("Errore:", error));
