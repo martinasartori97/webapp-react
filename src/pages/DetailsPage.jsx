@@ -61,7 +61,18 @@ const movies = [
 export default function DetailsPage() {
 
     const { id } = useParams();
+
+    console.log(id);
+
+    // const [movie, setMovie] = useState(null);
     const movie = movies.find(movie => movie.id === parseInt(id));
+    useEffect(() => {
+        fetch(`http://localhost:3001/api/movies/${id}`)
+            .then(response => response.json())
+            .then(data => setMovie(data))
+            .catch(err => console.log("Errore:", err));
+    }, [id]);
+
 
     if (!movie) {
         return <p>Film non trovato.</p>;
@@ -77,7 +88,6 @@ export default function DetailsPage() {
                     <p className="card-text"><strong>Abstract:</strong> {movie.abstract}</p>
                     <p className="card-text"><strong>Created At:</strong> {new Date(movie.created_at).toLocaleDateString()}</p>
                     <p className="card-text"><strong>Updated At:</strong> {new Date(movie.updated_at).toLocaleDateString()}</p>
-                    {/* Se hai l'immagine, puoi aggiungere un'immagine */}
                     {movie.image && <img src={movie.image} alt={movie.title} />}
                 </div>
             </div>
