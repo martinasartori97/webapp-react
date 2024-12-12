@@ -3,8 +3,10 @@ export default function Footer() {
         <footer>
 
             <p >
+
                 copyright 2024
             </p>
+
 
 
 
