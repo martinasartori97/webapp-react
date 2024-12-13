@@ -1,62 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-// const movies = [
-//     {
-//         id: 1,
-//         title: "Inception",
-//         director: "Christopher Nolan",
-//         genre: "Science Fiction",
-//         release_year: 2010,
-//         abstract: "A skilled thief is given a chance at redemption if he can successfully perform inception.",
-//         image: null,
-//         created_at: "2024-11-29T10:40:13.000Z",
-//         updated_at: "2024-11-29T10:40:13.000Z"
-//     },
-//     {
-//         id: 2,
-//         title: "The Godfather",
-//         director: "Francis Ford Coppola",
-//         genre: "Crime",
-//         release_year: 1972,
-//         abstract: "The story of a powerful Italian-American crime family and their struggles.",
-//         image: null,
-//         created_at: "2024-11-29T10:40:13.000Z",
-//         updated_at: "2024-11-29T10:40:13.000Z"
-//     },
-//     {
-//         id: 3,
-//         title: "Titanic",
-//         director: "James Cameron",
-//         genre: "Romance",
-//         release_year: 1997,
-//         abstract: "A romantic story set against the tragic sinking of the RMS Titanic.",
-//         image: null,
-//         created_at: "2024-11-29T10:40:13.000Z",
-//         updated_at: "2024-11-29T10:40:13.000Z"
-//     },
-//     {
-//         id: 4,
-//         title: "The Matrix",
-//         director: "The Wachowskis",
-//         genre: "Action",
-//         release_year: 1999,
-//         abstract: "A hacker discovers the truth about his reality and his role in the war against its controllers.",
-//         image: null,
-//         created_at: "2024-11-29T10:40:13.000Z",
-//         updated_at: "2024-11-29T10:40:13.000Z"
-//     },
-//     {
-//         id: 5,
-//         title: "Interstellar",
-//         director: "Christopher Nolan",
-//         genre: "Science Fiction",
-//         release_year: 2014,
-//         abstract: "A team of explorers travels through a wormhole in space to save humanity.",
-//         image: null,
-//         created_at: "2024-11-29T10:40:13.000Z",
-//         updated_at: "2024-11-29T10:40:13.000Z"
-//     }
-// ];
+
+
 
 export default function DetailsPage() {
 
@@ -97,5 +42,72 @@ export default function DetailsPage() {
 }
 
 
+
+
+
+
+
+
+// const ReviewForm = ({ onSubmit }) => {
+//     const [formData, setFormData] = useState({ name: '', vote: '', text: '' });
+
+//     const handleChange = (e) => {
+//         const { name, value } = e.target;
+//         setFormData({ ...formData, [name]: value });
+//     };
+
+//     const handleSubmit = (e) => {
+//         e.preventDefault();
+//         if (formData.name && formData.vote && formData.text) {
+//             onSubmit(formData);
+//             setFormData({ name: '', vote: '', text: '' });
+//         } else {
+//             alert('compila tutti i campi.');
+//         }
+//     };
+
+//     return (
+//         <form onSubmit={handleSubmit}>
+//             <div>
+//                 <label htmlFor="name">Nome:</label>
+//                 <input
+//                     type="text"
+//                     id="name"
+//                     name="name"
+//                     value={formData.name}
+//                     onChange={handleChange}
+//                     placeholder="Inserisci il tuo nome"
+//                     required
+//                 />
+//             </div>
+//             <div>
+//                 <label htmlFor="vote">Voto (1-5):</label>
+//                 <input
+//                     type="number"
+//                     id="vote"
+//                     name="vote"
+//                     value={formData.vote}
+//                     onChange={handleChange}
+//                     min="1"
+//                     max="5"
+//                     required
+//                 />
+//             </div>
+//             <div>
+//                 <label htmlFor="text">Recensione:</label>
+//                 <textarea
+//                     id="text"
+//                     name="text"
+//                     value={formData.text}
+//                     onChange={handleChange}
+//                     placeholder="Scrivi la tua recensione..."
+//                     rows="4"
+//                     required
+//                 />
+//             </div>
+//             <button type="submit">Invia Recensione</button>
+//         </form>
+//     );
+// };
 
 
