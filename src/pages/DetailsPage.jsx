@@ -10,15 +10,24 @@ export default function DetailsPage() {
     console.log(id);
 
     const [movie, setMovie] = useState(null);
+    const [review, setReview] = useState("")
 
     useEffect(() => {
 
         fetch(`http://localhost:3001/api/movies/${id}`)
             .then(response => response.json())
             .then(data => { setMovie(data.movie) })
-
             .catch(err => console.log("Errore:", err));
     }, [id]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (review) {
+            console.log("Recensione inviata:", review);
+            setReview("");
+        }
+    };
 
 
     if (!movie) {
@@ -37,6 +46,23 @@ export default function DetailsPage() {
                     <p className="card-text"><strong>Updated At:</strong> {new Date(movie.updated_at).toLocaleDateString()}</p>
                     {movie.image && <img src={movie.image} alt={movie.title} />}
                 </div>
+            </div>
+
+
+            {/* form per le recensioni */}
+            <div className="mt-5">
+                <h3>Leave a Review</h3>
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                        <textarea
+                            className="form-control"
+                            rows="3"
+                            value={review}
+                            onChange={(e) => setReview(e.target.value)}
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit Review</button>
+                </form>
             </div>
         </div>
 
