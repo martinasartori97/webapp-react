@@ -13,17 +13,30 @@ import './App.css'
 
 function App() {
 
+  const [loading, setLoading] = useState(false);
+
+  const values = {
+    loading,
+    setLoading
+  }
+
+
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/films/:id" element={<DetailsPage />} />
-            {/* <Route path="/Reviews" element={<ReviewForm />} /> */}
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <GlobalContext.Provider value={values}>
+
+
+
+        <BrowserRouter>
+          <Routes>
+            <Route element={<DefaultLayout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/films/:id" element={<DetailsPage />} />
+
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </GlobalContext.Provider>
     </>
   )
 }
