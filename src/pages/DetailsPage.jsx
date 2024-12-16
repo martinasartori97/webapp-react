@@ -9,13 +9,14 @@ export default function DetailsPage() {
 
     console.log(id);
 
-    // const [movie, setMovie] = useState(null);
+    const [movie, setMovie] = useState(null);
 
     useEffect(() => {
-        const movie = movies.find(movie => movie.id === parseInt(id));
+
         fetch(`http://localhost:3001/api/movies/${id}`)
             .then(response => response.json())
-            .then(data => setMovie(data))
+            .then(data => { setMovie(data.movie) })
+
             .catch(err => console.log("Errore:", err));
     }, [id]);
 
