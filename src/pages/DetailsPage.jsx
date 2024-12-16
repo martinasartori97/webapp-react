@@ -39,76 +39,13 @@ export default function DetailsPage() {
                 </div>
             </div>
         </div>
+
+
     );
+
+
+
 }
 
-
-
-
-
-
-
-
-// const ReviewForm = ({ onSubmit }) => {
-//     const [formData, setFormData] = useState({ name: '', vote: '', text: '' });
-
-//     const handleChange = (e) => {
-//         const { name, value } = e.target;
-//         setFormData({ ...formData, [name]: value });
-//     };
-
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
-//         if (formData.name && formData.vote && formData.text) {
-//             onSubmit(formData);
-//             setFormData({ name: '', vote: '', text: '' });
-//         } else {
-//             alert('compila tutti i campi.');
-//         }
-//     };
-
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <div>
-//                 <label htmlFor="name">Nome:</label>
-//                 <input
-//                     type="text"
-//                     id="name"
-//                     name="name"
-//                     value={formData.name}
-//                     onChange={handleChange}
-//                     placeholder="Inserisci il tuo nome"
-//                     required
-//                 />
-//             </div>
-//             <div>
-//                 <label htmlFor="vote">Voto (1-5):</label>
-//                 <input
-//                     type="number"
-//                     id="vote"
-//                     name="vote"
-//                     value={formData.vote}
-//                     onChange={handleChange}
-//                     min="1"
-//                     max="5"
-//                     required
-//                 />
-//             </div>
-//             <div>
-//                 <label htmlFor="text">Recensione:</label>
-//                 <textarea
-//                     id="text"
-//                     name="text"
-//                     value={formData.text}
-//                     onChange={handleChange}
-//                     placeholder="Scrivi la tua recensione..."
-//                     rows="4"
-//                     required
-//                 />
-//             </div>
-//             <button type="submit">Invia Recensione</button>
-//         </form>
-//     );
-// };
 
 
