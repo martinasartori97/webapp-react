@@ -1,13 +1,11 @@
-// import { NavLink } from "react-router-dom";
+
 export default function Header() {
     return (
         <header>
-            {/* <nav>
-                <NavLink to="/films">
-                    movies
-                </NavLink>
 
-            </nav> */}
+            <div class="d-flex justify-content-center badge text-bg-info">
+                <h1>Lista dei Films</h1>
+            </div>
 
 
 
