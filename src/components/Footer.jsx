@@ -2,16 +2,16 @@ export default function Footer() {
     return (
         <footer>
 
-            <p >
 
-                copyright 2024
-            </p>
-
-
+            <div class="d-flex justify-content-center badge text-bg-info" >
+                <h1>copyright 2024</h1>
+            </div>
 
 
 
-        </footer>
+
+
+        </footer >
 
 
 
