@@ -6,6 +6,7 @@ import DefaultLayout from './pages/DefaultLayout'
 import HomePage from './pages/HomePage'
 import DetailsPage from './pages/DetailsPage'
 import GlobalContext from "./contexts/GlobalContext";
+import NotFound from "./pages/NotFound";
 
 
 
@@ -32,6 +33,7 @@ function App() {
             <Route element={<DefaultLayout />}>
               <Route path="/" element={<HomePage />} />
               <Route path="/films/:id" element={<DetailsPage />} />
+              <Route path="*" element={<NotFound />} />
 
             </Route>
           </Routes>
